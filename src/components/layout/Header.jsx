@@ -49,7 +49,9 @@ function Header() {
         // Map sectionId to class selector
         const classMap = {
             'bcrypt-tools': '.bcrypt-tools',
-            'caesar-tools': '.caesar-tools'
+            'caesar-tools': '.caesar-tools',
+            'rsa-tools': '.rsa-tools',
+            'aes-tools': '.aes-tools'
         }
         
         const selector = classMap[sectionId] || `#${sectionId}`
@@ -156,6 +158,36 @@ function Header() {
                         }}
                     >
                         Caesar Cipher
+                    </button>
+                    <button
+                        type="button"
+                        className="header__dropdown-item"
+                        onMouseDown={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                        }}
+                        onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            scrollToSection('rsa-tools')
+                        }}
+                    >
+                        RSA Key Pair
+                    </button>
+                    <button
+                        type="button"
+                        className="header__dropdown-item"
+                        onMouseDown={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                        }}
+                        onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            scrollToSection('aes-tools')
+                        }}
+                    >
+                        AES-GCM
                     </button>
                 </div>
             </div>

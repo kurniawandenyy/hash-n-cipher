@@ -3,6 +3,8 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import BcryptTools from './components/bcrypt'
 import CaesarTools from './components/caesar'
+import RsaTools from './components/rsa'
+import AesTools from './components/aes'
 
 function App() {
   return (
@@ -12,6 +14,12 @@ function App() {
         <BcryptTools />
         <div style={{ marginTop: '4rem' }}>
           <CaesarTools />
+        </div>
+        <div style={{ marginTop: '4rem' }}>
+          <RsaTools />
+        </div>
+        <div style={{ marginTop: '4rem' }}>
+          <AesTools />
         </div>
       </main>
       <Footer />

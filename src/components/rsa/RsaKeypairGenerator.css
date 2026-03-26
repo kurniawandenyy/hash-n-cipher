@@ -1,0 +1,209 @@
+.rsa-keypair__card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5e9;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 38rem;
+    min-width: 18rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.rsa-keypair__card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.rsa-keypair__title {
+    color: #1f2937;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rsa-keypair__title::before {
+    content: "🗝️";
+    font-size: 1.2rem;
+}
+
+.rsa-keypair__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rsa-keypair__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rsa-keypair__label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rsa-keypair__input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.rsa-keypair__input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.rsa-keypair__hint {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.rsa-keypair__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.rsa-keypair__button {
+    flex: 1;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rsa-keypair__button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.rsa-keypair__button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.rsa-keypair__button--secondary {
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.rsa-keypair__button--secondary:hover:not(:disabled) {
+    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+}
+
+.rsa-keypair__error {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #ef4444;
+    background: #fef2f2;
+    color: #7f1d1d;
+    font-size: 0.9rem;
+}
+
+.rsa-keypair__result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 0.5rem;
+    border-left: 4px solid #0ea5e9;
+}
+
+.rsa-keypair__result--private {
+    background: #f5f3ff;
+    border-left-color: #7c3aed;
+}
+
+.rsa-keypair__result-label {
+    display: block;
+    font-weight: 600;
+    color: #0c4a6e;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rsa-keypair__result-text {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bae6fd;
+    border-radius: 0.375rem;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.75rem;
+    background: #f8fafc;
+    resize: vertical;
+    color: #1f2937;
+    line-height: 1.4;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+.rsa-keypair__result--private .rsa-keypair__result-label {
+    color: #4c1d95;
+}
+
+.rsa-keypair__result--private .rsa-keypair__result-text {
+    border-color: #ddd6fe;
+}
+
+.rsa-keypair__result-actions {
+    margin-top: 0.75rem;
+}
+
+.rsa-keypair__copy-button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rsa-keypair__copy-button:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .rsa-keypair__actions {
+        flex-direction: column;
+    }
+
+    .rsa-keypair__button {
+        width: 100%;
+    }
+
+    .rsa-keypair__copy-button {
+        width: 100%;
+    }
+}
